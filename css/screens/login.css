@@ -1,0 +1,90 @@
+.login{
+  height: 100vh;
+}
+
+.welcome-header{
+  margin: 70px 0px;
+  margin-top: 130px;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.welcome-header__title{
+  margin-bottom: 20px;
+  font-size: 60px;
+  font-weight: 600;
+  color: var(--yellow);
+  font-style: italic;
+}
+
+@keyframes logoChange{
+  0%, 100%{
+    color: var(--yellow);
+  }
+  25%, 75%{
+    color: rgb(227,255,0);
+  }
+  50%{
+    color: rgb(255,174,66);
+  }
+}
+
+.welcome-header__title .fa-bitbucket{
+  margin-right: 0px;
+  animation: logoChange 4s ease-in-out infinite;
+}
+
+.welcome-header__text{
+  width: 60%;
+  opacity: 0.7;
+}
+
+#login-form{
+  display:flex;
+  flex-direction: column;
+  margin: 0px 30px;
+}
+
+#login-form input{
+  border: none;
+  padding: 15px;
+  font-size: 15px;
+  margin-bottom: 25px;
+}
+
+
+#login-form input:not([type="submit"]){
+  border-bottom: 1px solid rgba(0, 0, 0, 0.2);
+  transition: border-color 0.3s ease-in-out;
+}
+
+#login-form input::placeholder{
+  color: rgba(0, 0, 0, 0.4);
+}
+
+#login-form input:focus{
+  border-color: var(--yellow);
+}
+
+#login-form input[type="submit"]{
+  background-color: var(--yellow);
+  cursor: pointer;
+  padding: 15px 0px;
+  border-radius: 20px;
+  color: white;
+  font-size: 20px;
+  font-weight: 600;
+}
+
+#login-form input[type="submit"]:hover{
+  background-color: orange;
+}
+
+#login-form a{
+  text-align: center;
+  text-decoration: none;
+  color: rgba(0, 0, 0, 0.6);
+  font-size: 13px; 
+}
