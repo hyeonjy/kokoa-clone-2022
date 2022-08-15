@@ -1,0 +1,245 @@
+#home-display-link{
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  height: 50px;
+  background: linear-gradient(to left, indigo, rgb(251,96,127));
+  padding: 15px 0px;
+  font-size: 18px;
+  color: white;
+  margin-bottom: 15px;
+  margin-top: 20px;
+  border-radius: 5px;
+}
+
+.home-display-link__column{
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+}
+
+.home-display-link__column span:last-child{
+  font-size: 13px;
+  margin-top: 5px;
+}
+
+#home-display-link i{
+  color: rgb(250, 222, 75, 0.4);
+}
+
+.home-screen__channel{
+  margin-top: 25px;
+}
+
+.home-screen__channel-header{
+  margin-bottom: 30px;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+}
+
+.home-screen__channel-header-column:first-child{
+  display: flex;
+  flex-direction: column;
+}
+
+.home-screen__channel-header-column span:first-child{
+  color: rgba(121,121,121);
+  margin-bottom: 3px;
+}
+
+.home-screen__channel-header-column span:nth-child(2){
+  display: flex;
+}
+
+.home-screen__channel-header-column span:last-child{
+  font-weight: 600;
+  font-size: 25px;
+}
+
+.chart-block{
+  display: flex;
+  align-items: flex-end;
+  margin-left: 3px;
+}
+
+@keyframes chartBounce{
+  0%{
+    transform: none;
+  }
+  50%{
+    transform: translateY(-2.5px) scaleY(1.3);
+  }
+  100%{
+    transform: none;
+  }
+}
+
+.chart-block__column{
+  width: 5px;
+  height: 10px;
+  background-color: var(--green);
+  margin: 2px;
+  animation: chartBounce 1s cubic-bezier(0.465, -0.025, 0.305, 1.030) infinite;
+}
+
+.chart-block__column:first-child{
+  animation-delay: 0.2s;
+}
+
+.chart-block__column:nth-child(2){
+  height: 16px;
+  animation-delay: 0.4s;
+}
+
+.chart-block__column:nth-child(3){
+  height: 12px;
+  animation-delay: 0.6s;
+}
+
+.home-screen-fav{
+  font-size: 23px;
+  font-weight: 600;
+}
+
+.home-screen-fav-info{
+  color: var(--green);
+  margin-top: 5px;
+  font-size: 6px;
+  font-weight: 600;
+  margin-left: 3px;
+}
+
+.home-screen-fav__list{
+  display: flex;
+  overflow-x: auto;
+  margin-top: 10px;
+  border-radius: 10px;
+}
+
+.home-screen-fav__list::-webkit-scrollbar {
+  height: 8px;
+}
+
+.home-screen-fav__list::-webkit-scrollbar-thumb {
+  background-color: var(--yellow);
+  border-radius: 10px;
+}
+
+.home-screen-fav__list::-webkit-scrollbar-track {
+  background-color: rgba(121,121,121,0.3);
+  border-radius: 10px;
+}
+
+
+.home-screen-fav-column{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  width: 180px;
+  height: 180px;
+  background-color: #F2F2F5;
+  padding: 10px;
+  flex-wrap: wrap;
+  border-radius: 10px;
+}
+
+.home-screen-fav-column:not(.home-screen-fav-column:first-child){
+  margin-left: 10px;
+}
+
+.home-screen-fav-column img{
+  width: 130px;
+  height: 130px;
+  border-radius: 10px;
+}
+
+.home-screen-fav-title{
+  width: 180px;
+  text-align: center;
+  font-weight: 600;
+}
+
+.home-screen-fav-hash{
+  font-size: 13px;
+  color: rgba(0,0,0,0.3);
+}
+
+.ranking-report .user-component{
+  background-color: #F2F2F5;
+  border-radius: 10px;
+  border: 1px solid rgba(0,0,0,0.1);
+  margin-bottom: 15px;
+  padding: 10px;
+}
+
+.ranking-report .user-component:hover{
+  background-color: rgba(0,0,0,0.3);
+}
+
+.ranking-report__count{
+  font-size: 25px;
+  margin-right: 15px;
+}
+
+@keyframes hideSplashScreen{
+  from{
+    opacity: 1;
+  }
+  to{
+    opacity: 0;
+    visibility: hidden;
+  }
+}
+
+#splash-screen{
+  background-color: var(--yellow);
+  position: absolute;
+  height: 100vh;
+  width: 100vw;
+  box-sizing: border-box;
+  top: 0;
+  left: 0;
+  display:flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 55px;
+  font-weight: 600;
+  animation: hideSplashScreen 2s ease-in-out forwards;
+  animation-delay: 2.8s;
+  z-index: 3;
+  color: rgba(0,0,0,0.8);
+}
+
+#splash-screen span{
+  animation: hideSplashScreen 0.6s ease-in-out forwards;
+  font-style: italic;
+}
+
+#splash-screen span:first-child{
+  animation-delay: 1s;
+  margin-left: 0px;
+  margin-right: 5px;
+}
+
+#splash-screen span:nth-child(2){
+  animation-delay: 1.3s;
+}
+
+#splash-screen span:nth-child(3){
+  animation-delay: 1.5s;
+}
+
+#splash-screen span:nth-child(4){
+  animation-delay: 1.8s;
+}
+
+#splash-screen span:nth-child(5){
+  animation-delay: 2.1s;
+}
+
+#splash-screen span:nth-child(6){
+  animation-delay: 2.4s;
+}
+
