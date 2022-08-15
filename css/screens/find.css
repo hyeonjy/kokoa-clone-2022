@@ -1,0 +1,203 @@
+.recommended-music{
+  margin: 25px 0px;
+  padding: 25px 0px;
+  border-top: var(--main-border);
+  border-bottom: var(--main-border);
+}
+
+.recommended-music__title{
+  font-size: 23px;
+  margin-bottom: 10px;
+  font-weight: 600;
+}
+
+.recommended-music__subtitle{
+  color: var(--green);
+  font-size: 12px;
+  margin-bottom: 10px;
+}
+
+.recommended-music__main{
+  display: flex;
+  overflow-x: auto;
+  background-color: #F2F2F5;
+  border-radius: 10px;
+  padding: 10px;
+}
+
+.recommended-music__main::-webkit-scrollbar {
+  height: 8px;
+}
+
+.recommended-music__main::-webkit-scrollbar-thumb {
+  background-color: var(--yellow); 
+  border-radius: 10px;
+}
+
+.recommended-music__main::-webkit-scrollbar-track {
+  background-color: rgba(121,121,121,0.3);
+  border-radius: 10px;
+}
+
+.recommended-music__main-box{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 10px;
+  flex-wrap: wrap;
+}
+
+.recommended-music__main-box:not(.recommended-music__main-box:first-child){
+  margin-left: 10px;
+}
+
+@keyframes imgbounce {
+  0%{
+    transform: none;
+  }
+  50%{
+    transform: scale(1.1);
+  }
+  100%{
+    transform: none;
+  }
+}
+
+.recommended-music__main-box img{
+  width: 200px;
+  height: 140px;
+  border-radius: 10px;
+}
+
+.recommended-music__main-box:hover img{
+  animation: imgbounce 0.8s ease-in-out;
+}
+
+.recommended-music__main-box span{
+  margin-top: 10px;
+  font-size: 15px;
+  width: 220px;
+  text-align: center;
+  font-weight: 300;
+}
+
+.open-chat {
+  margin-bottom: 120px;
+}
+
+.open-chat__header{
+  display: flex;
+  justify-content: space-between;
+  opacity: 1;
+  margin-bottom: 25px;
+}
+
+.open-chat__header h4{
+  font-weight: 600;
+}
+
+.open-chat__header span{
+  opacity: 0.6;
+}
+
+.open-post{
+  display:flex;
+  justify-content: space-between;
+  align-items: center;
+  border-radius: 10px;
+  background-color: #F2F2F5;
+  padding: 10px;
+  margin-bottom: 20px;
+}
+
+.open-post:hover{
+  background-color: rgba(0,0,0,0.3);
+}
+
+
+.open-post__title{
+  font-weight: 600;
+  margin-bottom: 7px;
+}
+
+.open-post__hashtags{
+  text-transform: uppercase;
+  opacity: 0.6;
+}
+
+.open-post__members{
+  margin-top: 7px;
+  display: flex;
+  align-items: center;
+}
+
+.open-post__members img{
+  width: 15px;
+  height: 15px;
+  border-radius: 50%;
+  margin-right: 5px;
+}
+
+.open-post__member-count{
+  opacity: 0.5;
+  font-size: 13px;
+}
+
+.open-post__members .divider{
+  width: 2px;
+  height: 15px;
+  margin: 0px 5px;
+  background-color: rgba(0,0,0,0.2);
+}
+
+.open-post__member-status{
+  color: red;
+  font-size: 13px;
+}
+
+.open-post__photo{
+  position: relative;
+}
+
+.open-post__photo img{
+  width: 170px;
+  height: 110px;
+  border-radius: 10px;
+}
+
+.open-post__heart-count{
+  background-color: rgba(0,0,0,0.5);
+  color: white;
+  padding: 5px;
+  border-radius: 20px;
+  display: flex;
+  align-items: center;
+  position: absolute;
+  bottom: 10px;
+  right: 10px;
+  font-size: 12px;
+}
+
+.open-post__heart-count span{
+  margin-left: 3px;
+}
+
+@keyframes heartBeat{
+  0%{
+    color:white;
+    transform: none;
+  }
+  50%{
+    color: tomato;
+    transform: scale(1.5);
+  }
+  100%{
+    color: white;
+    transform: none;
+  }
+}
+
+.open-post__heart-count:hover i{
+  will-change: transform;
+  animation: heartBeat 1s linear infinite;
+}
