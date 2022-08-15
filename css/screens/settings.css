@@ -1,0 +1,57 @@
+.alt-header-settings{
+  margin-top: 20px;
+}
+
+.settings-list__title{
+  color: rgba(0,0,0,0.5);
+  margin-top: 45px;
+}
+
+.settings__setting{
+  padding: 20px 0;
+  border-bottom: 1px solid rgba(0,0,0,0.1);
+  font-size: 18px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.settings__setting i{
+  opacity: 0.8;
+  margin-right: 20px;
+  font-size: 22px;
+}
+
+.settings__setting-column:last-child{
+  opacity: 0.5;
+  margin-right: 5px;
+  display: flex;
+  justify-content: flex-end;
+}
+
+.fa-toggle-on{
+  color: var(--green);
+}
+
+.settings__version span{
+  text-align: end;
+  margin-right: 20px;
+}
+
+.logout{
+  padding: 8px 10px;
+  border-radius: 30px;
+  border: 1px solid rgba(0,0,0,0.1);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.logout span{
+  opacity: 0.5;
+  font-size: 13px;
+}
+
+.logout:hover{
+  background-color: var(--yellow);
+}
